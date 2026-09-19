@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRANDSTAGE — Fashion. Talent. Brands. Opportunity.</title>
+<meta name="description" content="BRANDSTAGE connects fashion, beauty, lifestyle brands, designers, talent, academia and live experiences.">
+<meta name="theme-color" content="#151515">
+<style>
+:root{
+  --ink:#111111; --paper:#f7f5f0; --muted:#77736d; --line:#d9d5cd;
+  --accent:#d7a84a; --white:#fff; --dark:#151515;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink)}
+a{text-decoration:none;color:inherit}.container{width:min(1180px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:20px 4%;display:flex;align-items:center;justify-content:space-between;color:#fff;mix-blend-mode:normal}
+.logo{font-size:25px;font-weight:900;letter-spacing:4px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:25px;font-size:12px;text-transform:uppercase;letter-spacing:1.2px}
+.navlinks a{opacity:.9}.menu{display:none;border:1px solid #ffffff77;padding:8px 10px;background:transparent;color:#fff;cursor:pointer}
+.hero{min-height:92vh;background:
+linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.22)),
+url('hero.jpg') center/cover;
+display:flex;align-items:flex-end;color:#fff;padding:140px 0 75px}
+.hero-content{max-width:760px}.eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#e7c57d;margin-bottom:18px}
+h1{font-size:clamp(52px,8vw,108px);line-height:.88;margin:0 0 28px;letter-spacing:-5px}
+.hero p{font-size:18px;line-height:1.6;max-width:600px;color:#ddd}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:14px 22px;border:1px solid #fff;font-size:12px;text-transform:uppercase;letter-spacing:1.5px}
+.btn.primary{background:#fff;color:#111;border-color:#fff}.btn.gold{background:var(--accent);border-color:var(--accent)}
+.strip{background:#151515;color:#fff;padding:19px 0;overflow:hidden;white-space:nowrap;font-size:12px;letter-spacing:3px;text-transform:uppercase}
+.strip span{margin-right:55px;color:#ddd}.goldtxt{color:var(--accent)}
+section{padding:90px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
+.kicker{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+h2{font-size:48px;line-height:1;margin:8px 0 0;letter-spacing:-2px}
+.link{font-size:12px;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #111;padding-bottom:6px}
+.grid{display:grid;gap:18px}.events{grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border:1px solid var(--line);overflow:hidden}.visual{height:350px;background-size:cover;background-position:center;position:relative}
+.tag{position:absolute;left:15px;top:15px;background:#fff;padding:7px 10px;font-size:10px;text-transform:uppercase;letter-spacing:1px}
+.cardbody{padding:20px}.cardbody h3{margin:0 0 9px;font-size:23px}.meta{font-size:12px;color:var(--muted);line-height:1.7}
+.ecosystem{grid-template-columns:repeat(4,1fr)}
+.eco{min-height:210px;padding:25px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between}
+.eco b{font-size:22px}.eco small{color:var(--muted);line-height:1.5}.num{font-size:11px;color:var(--accent);letter-spacing:2px}
+.dark{background:#151515;color:#fff}.dark .kicker{color:#aaa}.dark .link{border-color:#fff}
+.feature{display:grid;grid-template-columns:1.1fr .9fr;min-height:560px}.feature-img{background:url('talent.jpg') center/cover}.feature-copy{padding:65px;display:flex;flex-direction:column;justify-content:center;background:#202020}.feature-copy h2{font-size:64px}.feature-copy p{color:#bbb;line-height:1.7}
+.academia{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.academy-box{padding:45px;background:#e9e4da;min-height:300px}.academy-box.darkbox{background:#1c1c1c;color:#fff}.academy-box h3{font-size:34px;margin:15px 0}.academy-box p{color:#666;line-height:1.7}.darkbox p{color:#bbb}
+.join{background:#d7a84a;color:#111;padding:70px 0}.join-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.join-card{background:#111;color:#fff;padding:30px;min-height:150px}.join-card h3{margin:0 0 10px;font-size:22px}.join-card p{color:#aaa;margin:0;line-height:1.5}
+footer{background:#111;color:#fff;padding:55px 0 25px}.footergrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}.footergrid h4{font-size:11px;letter-spacing:2px;color:#aaa;text-transform:uppercase}.footergrid a{display:block;margin:11px 0;color:#ddd;font-size:13px}.copyright{border-top:1px solid #333;margin-top:45px;padding-top:18px;color:#777;font-size:11px;display:flex;justify-content:space-between}
+@media(max-width:800px){
+  .navlinks.mobile-open{
+    display:flex;
+    position:absolute;
+    top:64px;
+    right:4%;
+    left:4%;
+    flex-direction:column;
+    gap:0;
+    padding:10px 0;
+    background:#151515;
+    border:1px solid #333;
+  }
+  .navlinks.mobile-open a{padding:14px 18px;}
+
+ nav{padding:16px 4%}.navlinks{display:none}.menu{display:block}
+ .hero{min-height:88vh;padding-bottom:55px} h1{letter-spacing:-3px}.hero p{font-size:15px}
+ section{padding:65px 0}.section-head{display:block}h2{font-size:38px;margin-bottom:20px}
+ .events,.ecosystem,.academia,.join-grid,.feature,.footergrid{grid-template-columns:1fr}
+ .visual{height:300px}.feature-img{height:430px}.feature-copy{padding:40px}.feature-copy h2{font-size:48px}
+ .copyright{display:block}.copyright span{display:block;margin-top:8px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#">BRAND<span>STAGE</span></a>
+  <div class="navlinks">
+    <a href="#shows">Shows</a><a href="#ecosystem">Brands</a><a href="#ecosystem">Designers</a>
+    <a href="#talent">Talent</a><a href="#academia">Academia</a><a href="#opportunities">Opportunities</a>
+  </div>
+  <button class="menu" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">MENU</button>
+</nav>
+
+<header class="hero">
+ <div class="container hero-content">
+  <div class="eyebrow">The Fashion & Brand Experience Ecosystem</div>
+  <h1>THE STAGE<br>FOR WHAT'S<br><i>NEXT.</i></h1>
+  <p>Discover brands. Showcase talent. Connect the industry. BRANDSTAGE brings fashion, beauty, lifestyle, education, media and live experiences onto one connected platform.</p>
+  <div class="buttons"><a class="btn primary" href="#shows">Explore Shows</a><a class="btn" href="#opportunities">Join BRANDSTAGE</a></div>
+ </div>
+</header>
+
+<div class="strip"><span>FASHION</span><span>BRANDS</span><span>DESIGNERS</span><span>TALENT</span><span>BEAUTY</span><span>ACADEMIA</span><span>MEDIA</span><span>EVENTS</span></div>
+
+<section id="shows">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">Live Experiences</div><h2>Upcoming Shows</h2></div><a class="link" href="#">View all events →</a></div>
+  <div class="grid events">
+   <article class="card"><div class="visual" style="background-image:url('show.jpg')"><span class="tag">Fashion Show</span></div><div class="cardbody"><h3>BRANDSTAGE EDIT 01</h3><div class="meta">VISAKHAPATNAM · OCTOBER 2026<br>Designers · Models · Brands · Buyers</div></div></article>
+   <article class="card"><div class="visual" style="background-image:url('brand.jpg')"><span class="tag">Brand Event</span></div><div class="cardbody"><h3>BRAND × STAGE</h3><div class="meta">BRAND LAUNCH EXPERIENCE<br>Showcase · Activation · Media · Networking</div></div></article>
+   <article class="card"><div class="visual" style="background-image:url('designer.jpg')"><span class="tag">Student Showcase</span></div><div class="cardbody"><h3>NEXT GEN RUNWAY</h3><div class="meta">ACADEMIA · DESIGN · TALENT<br>Students · Institutes · Industry mentors</div></div></article>
+  </div>
+ </div>
+</section>
+
+<section id="ecosystem">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">One Connected Network</div><h2>The Ecosystem</h2></div></div>
+  <div class="grid ecosystem">
+   <div class="eco"><span class="num">01</span><b>Brands</b><small>Fashion, beauty, jewellery, textile, lifestyle and emerging brands.</small></div>
+   <div class="eco"><span class="num">02</span><b>Designers</b><small>Established, emerging and student designers with collection showcases.</small></div>
+   <div class="eco"><span class="num">03</span><b>Talent</b><small>Models, MUAs, stylists, photographers, creators, hosts and production talent.</small></div>
+   <div class="eco"><span class="num">04</span><b>Academia</b><small>Institutes, industrial visits, internships, workshops and student showcases.</small></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark" id="talent">
+ <div class="container">
+  <div class="feature">
+   <div class="feature-img"></div>
+   <div class="feature-copy"><div class="kicker">Featured Network</div><h2>PEOPLE<br>MAKE THE<br><i>STAGE.</i></h2><p>Build a professional presence, discover collaborators and participate in the fashion and lifestyle industry through a structured talent ecosystem.</p><a class="btn gold" href="#opportunities">Create a Profile →</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="academia">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">BRANDSTAGE Academia</div><h2>From Classroom<br>to Runway.</h2></div></div>
+  <div class="academia">
+   <div class="academy-box"><div class="kicker">For Institutes</div><h3>Industry Connection</h3><p>Industrial visits, internships, training programs, masterclasses, competitions, industry interaction and student showcase opportunities.</p><a class="link" href="#opportunities">Partner with us →</a></div>
+   <div class="academy-box darkbox"><div class="kicker">For Students</div><h3>Build. Learn. Showcase.</h3><p>Move beyond the classroom through live events, portfolio opportunities, workshops, mentorship and real-world industry exposure.</p><a class="btn gold" href="#opportunities">Student Opportunities</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="opportunities" class="join">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">Enter the Network</div><h2>Join BRANDSTAGE</h2></div></div>
+  <div class="join-grid">
+   <div class="join-card"><h3>I'm a Brand</h3><p>Showcase products, launch campaigns, sponsor events and connect with the industry.</p></div>
+   <div class="join-card"><h3>I'm a Designer</h3><p>Present collections, participate in showcases and discover collaboration opportunities.</p></div>
+   <div class="join-card"><h3>I'm Talent</h3><p>Build your profile and access auditions, events, collaborations and opportunities.</p></div>
+   <div class="join-card"><h3>I'm an Institute</h3><p>Connect students and faculty with events, training and industry experiences.</p></div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="container">
+  <div class="footergrid">
+   <div><div class="logo">BRAND<span>STAGE</span></div><p style="color:#777;max-width:320px;line-height:1.6">A connected ecosystem for fashion, beauty, lifestyle, brands, talent, academia and live experiences.</p></div>
+   <div><h4>Explore</h4><a href="#shows">Shows & Events</a><a href="#ecosystem">Brands</a><a href="#ecosystem">Designers</a><a href="#talent">Talent</a></div>
+   <div><h4>Connect</h4><a href="#academia">Academia</a><a href="#opportunities">Opportunities</a><a href="#">Media</a><a href="#">Awards</a></div>
+   <div><h4>Participate</h4><a href="#opportunities">Join BRANDSTAGE</a><a href="#">Sponsor</a><a href="#">Exhibit</a><a href="#">Contact</a></div>
+  </div>
+  <div class="copyright"><span>© 2026 BRANDSTAGE. All rights reserved.</span><span>Prepared & Designed by S K RAJU</span></div>
+ </div>
+</footer>
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.querySelector(".navlinks");
+
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("mobile-open");
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("mobile-open");
+      menuBtn.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+</script>
+</body>
+</html>
